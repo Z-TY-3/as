@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        盒子模型
+    </title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        text-align:center;
+    }
+    div{
+        width:200px;
+        height:200px;
+        background:red;
+        padding:10px;
+        border:10px solid red;
+        margin:10px auto;
+        text-align:center;
+    }
+    #div1{
+        box-sizing:content-box;
+    }
+    #div2{
+        box-sizing:border-box;
+    }
+    #div3{
+        box-sizing:padding-box;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="div1">
+        content-box(标准盒子模型)
+    </div>
+    
+    <div id="div2">
+        border-box(IE盒子模型)
+    </div>
+
+    <div id="div3">
+        padding-box
+    </div>
+
+</body>
+</html>

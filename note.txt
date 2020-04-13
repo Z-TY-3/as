@@ -222,9 +222,15 @@
 				</div>
 			</div>
 
+		 
+			
+			盒子:元素的宽高由 content决定           元素又分行级块级
+			     元素框的总宽高 
+			  元素（element）的width + padding的左边距和右边距的值 + margin的左边距和右边距的值 + border的左右宽度；
+
 		2) 行级别标签
-			作用：填充网页
-			特点：默认宽高由内容决定；宽高无法指定；所有的行内元素可以共享一行空间;行内元素内部一般不允许嵌套子元素，只允许放文本
+			作用：填充网页  
+			特点：元素默认宽高由内容决定；宽高无法指定；所有的行内元素可以共享一行空间;行内元素内部一般不允许嵌套子元素，只允许放文本
 
 			span 			无意义的行内元素
 			a 				超链接
@@ -309,7 +315,7 @@
 				selector[name*=v]	已选择到的元素具有name属性，并且name属性的值中包含了'v'
 			2. 伪类过滤器
 				以:开头的
-				selector:first-child 	过滤出已选择元素中的是第一个孩子的元素
+				selector:first-child 	过滤出已选择元素中的 是第一个孩子的元素
 				selector:last-child 	
 				selector:nth-child(2)
 				selector:nth-child(even)
@@ -409,7 +415,7 @@
 				背景图
       background-repeat: no-repeat;
 				背景图的重复方式
-      background-size: contain;
+      background-size: contain;  //行向图
 				背景图的覆盖方式
       background-position: 50px 50px;
 				关键字 center
@@ -425,10 +431,10 @@
 			float:left;
 				向左侧浮动
 			clear:left;
-				当前元素左侧不允许有浮动元素，换行 (男女换行？)
+				当前元素左侧不允许有浮动元素，换行
 			display:block;
 				将一个元素设置为块元素
-				<span style="display:block"></span>（本质还是span 虽然变富有了）
+				<span style="display:block"></span>
 				
 			应该加在块元素上
 			1> 特点：
@@ -437,21 +443,64 @@
 				3. 在同一层次中，所有的浮动元素会在一行显示，当一行中无法容纳这些浮动元素的时候，就会自动换行
 				4. 浮动元素会失去对父元素的支撑
 			2> 浮动元素的父元素没有高度的问题
-				1. 所有子元素浮动，通过伪元素进行支撑
-				(光给contain加高度(最大浮动的元素高度变化时不好处理)
-				p标签(外边距)(当小狗)？结构不严谨 div(不严谨))
+				1. 所有子元素浮动，通过伪元素进行支撑    
+						 调节contain高度硬编码  加p标签撑起高度 结构不严谨
 				2. 保留一个子元素不浮动，用于支撑父元素，为了让他显示出来，可以加margin
-		2) 案例
+
+		2) 定位布局
+			position:static; 【静态】
+
+      position:relative
+      position:fixed
+      position:sticky
+
+			如果一个元素具有position规则，并且规则值为relative,absolute,fixed,sticky之一,那么，我就认为这个元素是一个定位元素；只有定位元素才能使用如下规则：
+				left:
+				right:
+				bottom:
+				top:
+
+			相对定位
+      	position:relative
+				特点：
+					1. 相对于当前元素所在位置
+					2. 当前元素不会脱离文档流(即使发生了移动也不会被其他元素抢占位置)
+				应用：
+					一般情况下相对定位要配合绝对定位来进行移动
+
+			绝对定位
+      	position:absolute
+				特点：
+					1. 相对于距离它最近的父定位元素，如果它的父元素没有定位元素，那就相对于浏览器视口
+					2. 脱离文档流（不占据默认文档流的空间；块元素的宽度不再为100%）
+			固定定位
+      	position:fixed
+				特点：
+					1. 相对于浏览器视口
+					2. 脱离文档流（不占据默认文档流的空间；块元素的宽度不再为100%）
+					3. 不会随着屏幕的移动而移动
+			
+			粘滞定位(补充)
+
+
+		=) 案例
 			1. 块元素居中
 				给块元素一个宽度
 				margin:0 auto;
 
-				(	上海复旦在上海录取率 是什么样 格局是什么样   孩子家庭等等  看问题
-					海归出来  落户() 一套房子一千万 资源好的地方那就是一切  医生的服务态度等等 学区房
-					本地医保在90%  不本地50%  不公平一直存在的 
-					都来上海看病 医疗机制会垮   选择器机制   医疗教育好的一批 
-					  聊无关痛痒的 缓解就业压力 年轻人 不稳定因素 几年之后我们依旧面临社会压力
-				)
+	10. 选择器的优先级 *
+		Importance 		特权
+			!important
+		Specificity 	权重（积分机制）
+			1000 	style属性中   
+			100 	id选择器                          id
+			10 		类选择器，伪类过滤器，属性过滤器	类
+			1 		元素选择器，伪元素选择器		   元素
+		Source order 	顺序
+
+	11. 
+			
+		
 
 
 
@@ -584,9 +633,125 @@ xxx微小型项目定制工作室（远程办公）
 	公司定制小的it项目
 	...
 
+~~~~~~~~~~拓展技术~~~~~~~~~~~
+1. 阿里云服务器的使用
+	外网ip 	39.108.98.130（linux）ubuntu16.04
+	root 	
+	root密码	
+
+	putty
+	ssh工具: xshell
+
+	> ssh 
+	> scp
+
+2. 登录到阿里云服务器上（ubuntu）
+	> ssh root@39.108.98.130
+3. 更新源
+	# apt update
+4. 安装软件
+	1) 在线安装（apache、mysql、vsftpd、subversion）
+		# apt install apache2
+	2) 解压安装（jdk、tomcat）
+		1. 下载安装包
+		2. 解压
+		3. 配置环境变量
+	3) 编译安装(nginx、fastdfs、... 专业软件)
+		源码 c代码
+
+5. 安装apache
+	apache作为静态网页的服务器
+	1) 测试
+		http://39.108.98.130:80 
+	2) 安装
+		# apt install apache2
+
+		查看apache2服务器的运行状态
+		# service apache2 status
+
+		通过wget测试web服务器的运行状态
+		# wget http://127.0.0.1:80/index.html 
+			如果这种方式可以获取到一个index.html说明你的apache打开了，并且能用
+		# wget http://39.108.98.130:80/index.html
+			如果访问不到表示无法通过外网访问我们的服务器，极有可能是防火墙的问题
+		
+	3) 部署
+		将我们的网页部署/var/www/html下即可
+
+		http://39.108.98.130:80/index.html
+
+		/ 										=> /var/www/html
+		/yanxuan/index.html 	=> /var/www/html/yanxuan/index.html
+		
+		http://39.108.98.130:80/yanxuan/index.html
+
+6. 如何将本地文件上传到阿里云服务器？？？
+	yanxuan	
+		images
+		css
+			common.css
+			style.css
+		index.html
+	1) 打包成为xxx.zip
+	2) 通过scp命令进行上传
+		> scp ./xxx.zip root@ip:~
+		将xxx.zip上传到ip指定的服务器的root账号的家目录下
+	3) 通过unzip进行解压
+		如果unzip没有安装，要进行安装
+		# apt install unzip
+		# unzip xxx.zip
+7. 在阿里云服务器中安装jdk
+	1) 通过scp命令将jdk上传到云服务器上
+	2) 将jdk解压到/opt下
+	3) 配置环境变量
+		/etc/profile
+
+		export JAVA_HOME=/opt/jdk1.8.0_131
+		export PATH=$PATH:$JAVA_HOME/bin
+8. 在阿里云服务器中安装mysql
+	1) 命令安装
+		# apt install mysql-server-5.7
+		一定要注意设置默认密码，默认密码不要为root
+		rootSH123
+	2) 安装完成mysql会自动启动
+		# mysql -uroot -prootSH123
+	
+	3) 默认情况下，root账号只允许当前主机访问
+		如果现在你通过navicator来访问就会访问失败，为了数据安全，不允许！
+		# mysql -uroot -h39.108.98.130 -prootSH123
+
+		解决方案：
+			1. 修改系统表user,将你使用的账号的host字段改为%,表示允许任何主机访问数据库
+				mysql> use mysql
+				mysql> update user set host='%' where user='root'
+			2. 修改mysql的配置文件 /etc/mysql/my.cnf
+				[client]
+				default-character-set=utf8
+				[mysqld]
+				character-set-server=utf8
+				max_connections=1000000
+
+				#一定放在结尾位置
+				bind-address=0.0.0.0
+			3. 重启mysql服务
+				# service mysql restart
+
+			4. 如果装失败了，请你彻底卸载mysql重新安装配置
+
+			5. 通过navicator连接mysql进行数据库的创建和表的创建
+				ddl 一般不用
+
+9. 如果涉及团队协作
+	代码版本控制 github(私有仓库，团队人数不能超过4人)
+	我就想用svn，研究如何在linux操作系统中安装svn的服务器
 
 
 
+
+	-----
+	将你之前写的后端服务程序部署到阿里云上
+
+	
 
 
 

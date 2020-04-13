@@ -1,0 +1,5 @@
+{
+    "open-in-browser.default": "firefox",
+    "browser-preview.startUrl": "https://opera.com",
+    "view-in-browser.customBrowser": "mozilla"
+}

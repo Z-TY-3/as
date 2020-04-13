@@ -1,0 +1,78 @@
+
+/* .functab {
+    width: 100%;
+    background-color: white;
+    margin-bottom: 100px;
+}
+
+.functab .g-row{
+    width: 1210px;
+    height: 165px;
+    background-color: white;
+    /* margin-right: 40px; */
+    margin-top: 30px;
+    /* position: relative; */
+    margin-bottom: 30px;
+}
+.functab .g-row > div.tab_logo{
+    margin-right: 360px;
+}
+.functab .g-row > div.input{
+    margin-right: 200px;
+}
+.functab .g-row > div.cart{
+    margin-right: 0px;
+} 
+.functab .g-row > .tab_logo{
+    margin-bottom: 80px;
+}
+
+.functab .g-row > div{
+    width: 134px;
+    height: 30px;
+        float: left;
+        margin-right: 402px;
+        /* 在这里整个横向两个就700 +700 2100 ？ */
+        /* margin:30px; */
+        margin-top: 30px;
+        margin-bottom: 30px;
+        /* margin上下  左右*/
+}
+
+.functab .tab_nav{
+    width: 1210px;
+    height: 30px;
+    background-color: white;
+    margin-right: 40px;
+    /* position: absolute; */
+    clear: left;
+    /* clear换行就行 */
+    /* top: 90px; */
+}   
+.functab > .wrapper > .g-row .tab_nav  li{
+    width: 100px;
+    height: 30px;
+    float: left;
+    margin-right: 40px;
+}
+.functab input[type="text"]{
+    position: relative;
+}
+.functab  input[type="button"]{
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    right: 454px;
+    top: 90px;
+}
+
+.functab .wrapper::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.functab ul::after {
+    content: "";
+    display: block;
+    clear: both;
+} 

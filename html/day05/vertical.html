@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* height: 36px; */
+            background-color: #666666;
+            text-align: center;
+            /* line-height:36px; */
+            /* 行高变高 */
+        }   
+        .box >span{
+            color:white;    
+            /* vertical-align: ; */
+        }
+
+        .box > span:first-child{
+            font-size: 12px;
+            vertical-align: top;
+        }
+        .box> span:nth-child(2){
+            font-size: 16px;
+        }
+        .box > span:nth-child(3){
+            font-size: 36px;
+        }
+/* 块元素 高度由内容决定性影响 */
+
+
+    </style>
+</head>
+<body>
+    
+<div class="box">
+    <span>asdasd</span>
+    <span>asda阿瑟东sd</span>
+    <span>啊啊</span>
+
+</div>
+    
+</body>
+</html>

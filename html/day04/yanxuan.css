@@ -1,0 +1,332 @@
+@font-face {
+    font-family: 'iconfont';
+    /* project id 1748940 */
+    src: url('https://at.alicdn.com/t/font_1748940_rqdwkpr47r.eot');
+    src: url('https://at.alicdn.com/t/font_1748940_rqdwkpr47r.eot?#iefix') format('embedded-opentype'),
+        url('https://at.alicdn.com/t/font_1748940_rqdwkpr47r.woff2') format('woff2'),
+        url('https://at.alicdn.com/t/font_1748940_rqdwkpr47r.woff') format('woff'),
+        url('https://at.alicdn.com/t/font_1748940_rqdwkpr47r.ttf') format('truetype'),
+        url('https://at.alicdn.com/t/font_1748940_rqdwkpr47r.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont";
+    font-style: normal;
+}
+
+/* 1.重置样式 */
+body {
+    font: 12px 'Microsoft YaHei', '微软雅黑'
+}
+
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 2.公共样式 */
+.wrapper {
+    width: 1210px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.f_clear{
+    clear: both;
+}
+
+
+
+.two_bar .search_box{
+    box-sizing: border-box;
+    border: 1px solid sienna;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 20px;
+    padding: 0 20px 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.turns{
+    background-color:teal;
+    margin-bottom: 30px;
+}
+.turns .wrapper{
+    background-color:teal;
+}
+
+.turns >.wrapper > ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/* /???打错字  tunrs？  取消父类继承？ */
+.turns  li{
+    width: 200px; 
+    height: 400px;
+    background-color: teal;
+    margin-right: 30px;
+    display: block;
+    float: left;
+}
+
+
+
+
+
+
+
+
+/* 3.结构样式 */
+/* 3.1 第一行产品 */
+.products {
+    background-color: #f4f4f4;
+    margin-top: 0px;
+}
+
+.products ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.products ul li {
+    height: 350px;
+    width: 280px;
+    float: left;
+    margin-right: 30px;
+    background-color: seagreen;
+}
+
+.products ul>li:last-child {
+    margin-right: 0;
+}
+
+
+/* 3.2人气 */
+.renqi {
+    margin-top: 30px;
+    background-color: #f4f4f4;
+}
+
+.renqi ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.renqi ul>li {
+    float: left;
+    margin-right: 30px;
+}
+
+.renqi ul>li {
+    width: 200px;
+    height: 250px;
+    background-color: plum;
+}
+
+.renqi ul>li:first-child {
+    width: 520px;
+    height: 530px;
+}
+
+.renqi ul>li:nth-child(4),
+.renqi ul>li:nth-child(7) {
+    margin-right: 0;
+}
+
+.renqi ul>li:nth-child(2),
+.renqi ul>li:nth-child(3),
+.renqi ul>li:nth-child(4) {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+.header {
+    background-color: #333333;
+    color: #f4f4f4;
+    margin-bottom: 1em;
+}
+
+.header a {
+    color: #f4f4f4;
+}
+
+.header>.wrapper {
+    background-color: #333333;
+    /* position: relative; */
+}
+
+.header>.wrapper::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.header ul {
+    float: right;
+}
+
+.header ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header ul>li {
+    float: left;
+    width: 80px;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+/* 直接子代不是 ul */
+/* .header  > ul li.App:hover > .AppHover{
+    display:block;
+ } */
+/* App二维码 块元素浮动 伪类选择器CSS */
+.header>.wrapper>ul li.App:hover>.AppHover {
+    display: block;
+}
+
+/* .header .wrapper >ul >li:nth-child(7):hover .AppHover {
+  display: block;
+   } */
+.AppHover {
+    /*  */
+    height: 160px;
+    position: absolute;
+    background-color: tomato;
+    top: 40px;
+    right: -40px;
+    display: none;
+}
+
+.header>.wrapper>ul li.App {
+    position: relative;
+}
+
+.header .wrapper>ul li.CS:hover>.CS_Service {
+    display: block;
+}
+
+.CS_Service {
+    width: 80px;
+    height: 200px;
+    background-color: saddlebrown;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    display: none;
+}
+
+.header .wrapper>ul li.CS {
+    position: relative;
+}
+
+
+/* | 分隔 */
+.header .wrapper > ul li:not(:first-child)::before{
+        content: "|";
+        display: inline-block;
+        vertical-align: auto ;
+        /* line height */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 横向  块元素 */
+/* .turns .wrapper{
+    width: 100%;
+    height: 200px;
+    background-color: seagreen;
+    margin-bottom: 60px;
+} */
+
+
+
+
+
+
+
+
+
+
+/* 模态框 */
+.shadow {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    /* 后台点击事件  block块级显示 */
+}
+
+.dialog {
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    /* margin: 100px auto 0; */
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    top: 100px;
+}
+7
+.dialog>.dialog_title {
+    border-bottom: 1px solid #efefef;
+    padding: 1em;
+}
+
+.dialog>.dialog_title .btn_close {
+    /* font-family:"iconfont"; */
+    /* font-style: normal; */
+    /* display: block; */
+    float: right;
+}

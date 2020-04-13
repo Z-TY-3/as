@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.box{
+    /* box-sizing: content-box; */
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+}
+.box::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.one{
+        /* box-sizing: content-box; */
+        border:1px;
+        width:98px;
+        height: 98px;
+        background-color: blueviolet;
+        float: left;
+    }
+.two{
+    /* box-sizing: content-box; */
+    border: 1px;
+    width: 98px;
+    height: 98px;
+    background-color: aqua;
+    float: left;
+}
+
+
+.input >input[type="text"]{
+    
+}   
+.input > input [type="button"]{
+
+}
+
+</style>
+    
+<body>
+
+    <div class="box">
+        <div class="one"></div>
+        <div class="two"></div>
+    </div>
+
+
+
+
+    <div class="input">
+
+            <input type="text">
+            <input type="button" value="提交">
+    </div>
+
+</body>
+</html>
